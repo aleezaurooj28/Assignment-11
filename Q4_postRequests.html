@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Request Practice Dashboard</title>
+    <link rel="stylesheet" href="Q4_postRequests.css">
+</head>
+<body>
+    <header>
+        <h1>API Request Practice Helper</h1>
+    </header>
+
+    <main>
+        <section class="control-panel">
+            <h2>Submit Announcement (POST)</h2>
+            <form id="announcement-form">
+                <div class="field">
+                    <label>Title:</label>
+                    <input type="text" id="announce-title" value="System Maintenance" required>
+                </div>
+                <div class="field">
+                    <label>User ID:</label>
+                    <input type="number" id="announce-uid" value="42" required>
+                </div>
+                <div class="field">
+                    <label>Content:</label>
+                    <textarea id="announce-content" required>The operational cluster down-time occurs at 04:00 UTC.</textarea>
+                </div>
+                <button type="submit" class="btn post">Submit Announcement via POST</button>
+            </form>
+
+            <div class="test-triggers">
+                <h2>Simulate Mutations Sequence (/posts/1)</h2>
+                <button id="put-trigger" class="btn put">Execute PUT (Replace)</button>
+                <button id="patch-trigger" class="btn patch">Execute PATCH (Modify Title)</button>
+                <button id="delete-trigger" class="btn delete">Execute DELETE (Remove)</button>
+            </div>
+        </section>
+
+        <section class="console-panel">
+            <h2>Response Terminal Logger Output</h2>
+            <div id="terminal" class="terminal">Awaiting execution pipelines commands...</div>
+        </section>
+    </main>
+
+    <script src="Q4_postRequests.js"></script>
+</body>
+</html>

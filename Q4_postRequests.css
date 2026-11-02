@@ -1,0 +1,104 @@
+body {
+    font-family: monospace;
+    background-color: #0f172a;
+    color: #e2e8f0;
+    padding: 20px;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px dashed #334155;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #38bdf8;
+    margin: 0;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    main { grid-template-columns: 1fr; }
+}
+
+h2 {
+    font-size: 16px;
+    color: #94a3b8;
+    margin-top: 0;
+    border-left: 3px solid #38bdf8;
+    padding-left: 8px;
+    margin-bottom: 15px;
+}
+
+.control-panel, .console-panel {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #334155;
+}
+
+.field {
+    margin-bottom: 12px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 4px;
+    color: #cbd5e1;
+}
+
+.field input, .field textarea {
+    width: 100%;
+    padding: 8px;
+    background: #0f172a;
+    border: 1px solid #475569;
+    color: #fff;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: monospace;
+    margin-bottom: 10px;
+}
+
+.btn.post { background: #0284c7; }
+.btn.put { background: #d97706; }
+.btn.patch { background: #7c3aed; }
+.btn.delete { background: #dc2626; }
+
+.test-triggers {
+    margin-top: 25px;
+    border-top: 1px dashed #334155;
+    padding-top: 20px;
+}
+
+.terminal {
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 4px;
+    padding: 15px;
+    min-height: 400px;
+    white-space: pre-wrap;
+    overflow-y: auto;
+    color: #4ade80;
+    font-size: 13px;
+    line-height: 1.5;
+}
